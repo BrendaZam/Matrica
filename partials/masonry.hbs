@@ -1,0 +1,26 @@
+<div class="masonry-wrapper">
+  <div id="masonry" class="clearfix">
+    {{#foreach posts}}
+    <div class="item">
+      <article class="item-appear {{post_class}}">
+        {{#if feature_image}}
+        <div class="post-image" style="background-image: url({{feature_image}}); background-size: cover">
+        </div>
+        {{/if}}
+        <div class="item-content">
+          <header>
+            <div class="item-meta">
+              <span>{{#author}}<a href="{{url}}">{{name}}</a>{{/author}}</span><time class="blog-date" datetime="{{date format="YYYY-MM-DDTHH:mm:ss.SS\Z"}}"> &mdash; {{date format="DD MMMM YYYY"}}</time>
+            </div>
+            <h2><a href="{{url}}">{{title}}</a></h2>
+          </header>
+          <div class="item-excerpt">
+            <p>{{excerpt words="15"}} ...</p>
+          </div>
+          <a href="{{url}}" class="item-more">Read more</a>
+        </div>
+      </article>
+    </div>
+    {{/foreach}}
+ </div>
+</div>

@@ -1,0 +1,12 @@
+<div id="mobile-menu">
+<div class="mobile-menu-wrap">
+	{{navigation}}
+	<div class="footer-title-description">
+		<a href="{{@blog.url}}">{{@blog.title}}</a>{{#if @blog.description}}<br/>
+		<span>{{@blog.description}}</span>{{/if}}
+	</div>
+	<div class="footer-copyright">
+		Copyright &copy; {{date format="YYYY"}}, {{@blog.title}}. All Right Reserved.
+	</div>
+	</div>
+</div>

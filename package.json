@@ -1,0 +1,10 @@
+{
+    "name": "hoshi",
+    "version": "1.0.3",
+    "author": {
+        "email": "hello@fueko.net"
+    },
+    "config": {
+        "posts_per_page": 7
+    }
+}

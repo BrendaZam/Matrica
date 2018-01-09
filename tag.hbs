@@ -1,0 +1,19 @@
+{{!< default}}
+{{#tag}}
+	<article class="featured-top featured-wrapper-bg clearfix">
+		<div class="content {{#if feature_image}}" style="background-image: url({{feature_image}}); background-size: cover{{/if}}">
+			<section class="featured-wrapper tag-wrapper {{#if feature_image}}overlay-featured{{/if}}">
+				<div class="tag-name">
+					<h2>{{name}}</h2>
+				</div>
+				{{#if description}}
+				<div class="tag-description">
+					{{description}}
+				</div>
+				{{/if}}
+			</section>
+		</div>
+	</article>
+	{{/tag}}
+{{>masonry}}
+{{pagination}}

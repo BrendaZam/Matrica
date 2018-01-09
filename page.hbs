@@ -1,0 +1,17 @@
+{{!< default}}
+{{#post}}
+<div class="page-wrap">
+  <main class="clearfix">
+  <article class="{{post_class}}">
+    {{#if feature_image}}
+    <div class="post-image" style="background-image: url({{feature_image}}); background-size: cover"></div>
+    {{/if}}
+    <div class="post-wrap">
+      <section class="post-content">
+        {{content}}
+      </section>
+    </div>
+  </article>
+  </main>
+</div>
+{{/post}}

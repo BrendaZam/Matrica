@@ -1,0 +1,21 @@
+<header class="main-header">
+<button class="toggle-button"><i class="menu"></i></button>
+<nav class="main-menu">
+  {{navigation}}
+  </nav>
+  <div class="blog-information">
+    {{#if @blog.logo}}
+    <a class="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+    <div class="wrap">
+      <h2 class="description">{{@blog.description}}</h2>
+    </div>
+    {{else}}
+    <div class="wrap">
+      <h1 class="title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+      <h2 class="description">{{@blog.description}}</h2>
+       <br>
+      <a href="https://twitter.com/laurosilvacom?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @laurosilvacom</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    {{/if}}
+  </div>
+</header>

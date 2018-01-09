@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-title" content="{{@blog.title}}">
+    <meta name="application-name" content="{{@blog.title}}">
+    <link rel="shortcut icon" href="{{asset "img/favicon.ico"}}">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&amp;subset=latin-ext">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
+    <noscript><style>#masonry{opacity:1}#masonry .item{width:100%}#mobile-menu,.toggle-button{display:none}.main-menu{display:block}</style></noscript>
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
+    {{>mobile}}
+    <div id="mobile-wrap">
+      <div class="site-wrapper" {{>background}}>
+        <div class="site-overlay">
+          <div class="site-container">
+            {{>header}}
+            {{{body}}}
+            {{>footer}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{{asset "js/global.js"}}"></script>
+    {{#is "post, page"}}
+    <script src="{{asset "js/post.js"}}"></script>
+    {{/is}}
+    {{^is "post, page"}}
+    <script src="{{asset "js/home.js"}}"></script>
+    {{/is}}
+    {{ghost_foot}}
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<footer class="main-footer">
+  {{#if @labs.subscribers}}
+  <div class="subscribe">
+    <section class="gh-subscribe">
+      <h3>Sign up to {{@blog.title}} <b>newsletter</b></h3>
+      {{subscribe_form placeholder="Your email address"}}
+    </section>
+  </div>
+  {{/if}}
+  <div class="footer-copyright">
+    Copyright &copy; {{date format="YYYY"}}, <a href="{{@blog.url}}">{{@blog.title}}</a>. All Right Reserved.
+  </div>
+</footer>

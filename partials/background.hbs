@@ -1,0 +1,15 @@
+{{#foreach posts}}
+{{#if @first}}
+{{#if feature_image}}
+style="background-image:url({{feature_image}})"
+{{else}}
+{{#if @blog.cover_image}}
+style="background-image:url({{@blog.cover_image}})"
+{{/if}}
+{{/if}}
+{{/if}}
+{{else}}
+{{#if @blog.cover_image}}
+style="background-image:url({{@blog.cover_image}})"
+{{/if}}
+{{/foreach}}

@@ -1,0 +1,27 @@
+{{!< default}}
+{{#author}}
+<article class="featured-top featured-wrapper-bg clearfix">
+	<div class="content {{#if cover_image}}" style="background-image: url({{cover_image}}); background-size: cover{{/if}}">
+		<section class="featured-wrapper author-wrapper {{#if cover_image}}overlay-featured{{/if}}">
+			{{#if profile_image}}
+			<div class="author-image" style="background-image: url({{profile_image}})"></div>
+			{{/if}}
+			<div class="author-description">
+				<h2>{{name}}</h2>
+				{{#if bio}}
+				<div class="author-bio">
+					{{bio}}
+				</div>
+				{{/if}}
+			</div>
+			<div class="author-social">
+				{{#if website}} <a href="{{website}}"><i class="icons link"></i></a>{{/if}}
+				{{#if facebook}} <a href="{{facebook_url}}"><i class="icons facebook"></i></a>{{/if}}
+				{{#if twitter}} <a href="{{twitter_url}}"><i class="icons twitter"></i></a>{{/if}}
+			</div>
+		</section>
+	</div>
+</article>
+{{/author}}
+{{>masonry}}
+{{pagination}}
